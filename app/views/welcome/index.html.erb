@@ -1,0 +1,15 @@
+<% if user_signed_in? %>
+
+<h1>Welcome My Tiny Blog</h1>
+<p><b>Today is </b><%= @date %> and <b>time is </b><%= @time%></p>
+<p>You will see my lovely posts in here</p>
+<br>
+<% if @posts.any? %>
+  <%= link_to 'See my posts', posts_url%>
+<% else %>
+  <p>There is no posts :(</p>
+<% end %>
+
+<% else %>
+
+<% end %>
